@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Filipino-inspired fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700;900&family=Righteous&family=Anton&display=swap");
+
+/* Recoleta Display Bold font */
+@font-face {
+  font-family: 'Recoleta';
+  src: url('/fonts/Recoleta-Bold.woff2') format('woff2'),
+       url('/fonts/Recoleta-Bold.woff') format('woff'),
+       url('/fonts/Recoleta-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: "Lato", system-ui, -apple-system, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Fire-inspired gradient background (orange only, dark–light) */
+  .fire-gradient {
+    background: linear-gradient(
+      135deg,
+      #bb3000 0%, /* deep burnt orange */
+      #f6680c 35%,
+      #ff930f 65%,
+      #ffd17b 100% /* pale, glowing orange */
+    );
+  }
+
+  /* Vignette to add depth (dark edges, lighter center) */
+  .fire-vignette {
+    background: radial-gradient(
+      circle at 50% 40%,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.0) 45%,
+      rgba(0,0,0,0.15) 70%,
+      rgba(0,0,0,0.25) 100%
+    );
+  }
+}
+
+@layer components {
+  /* BBQ-themed patterns and textures */
+  .bbq-gradient {
+    background: linear-gradient(135deg, #d32f2f 0%, #ff6f00 50%, #ffa000 100%);
+  }
+
+  .flame-gradient {
+    background: linear-gradient(
+      to top,
+      #ff6f00 0%,
+      #ff8f00 50%,
+      #ffa000 75%,
+      #ffc107 100%
+    );
+  }
+
+  .smoky-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(62, 39, 35, 0.1) 0%,
+      transparent 100%
+    );
+  }
+
+  /* Grill texture pattern */
+  .grill-pattern {
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(62, 39, 35, 0.05) 2px,
+        rgba(62, 39, 35, 0.05) 4px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(62, 39, 35, 0.05) 2px,
+        rgba(62, 39, 35, 0.05) 4px
+      );
+  }
+
+  /* Banig (woven mat) texture for tropical Filipino vibe */
+  .banig-texture {
+    background-image:
+      linear-gradient(45deg, rgba(93,64,55,0.06) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(93,64,55,0.06) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(93,64,55,0.06) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(93,64,55,0.06) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+  }
+
+  /* Capiz-like hairline */
+  .capiz-line {
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+  }
+
+  /* Link underline slide */
+  .link-underline { position: relative; }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6f00, #ffa000, #ffd700);
+    transition: width 200ms ease;
+  }
+  .link-underline:hover::after { width: 100%; }
+  /* CTA pulse */
+  @keyframes ringPulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(255, 193, 7, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+  }
+  .ring-pulse { animation: ringPulse 1.8s ease-out infinite; }
+}
