@@ -82,6 +82,11 @@ npm run build
 npm start
 ```
 
+## Acknowledgements
+
+- Built with ❤️ using [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), and [Framer Motion](https://www.framer.com/motion/).
+- Designed and developed by Peter Pei-Te Sun.
+
 ## License
 
 All rights reserved. Mang Joe's Chicken Inasal.

@@ -41,15 +41,16 @@ export default function Logo({
 
   return (
     <div className="relative flex items-center justify-center" style={{ width, height }}>
-      {/* Use regular img for better error handling with fallbacks */}
-      <img
+      {/* Use Next.js Image for optimization, with fallback handling */}
+      <Image
         src={logoPath}
         alt="Mang Joe's Chicken Inasal Logo"
         width={width}
         height={height}
         className={`object-contain ${className}`}
         onError={handleError}
-        style={{ maxWidth: "100%", height: "auto", display: "block" }}
+        priority={priority}
+        unoptimized
       />
     </div>
   );

@@ -110,7 +110,7 @@ export default function Hero() {
           >
             <p className="text-xs text-[#424242] leading-relaxed font-sans">
               At MangJoe, we bring authentic Filipino flavors to New Zealand,
-              celebrating the Philippines' rich culinary heritage
+              celebrating the Philippines&apos; rich culinary heritage
             </p>
           </motion.div>
 
@@ -168,7 +168,7 @@ export default function Hero() {
           >
             <p className="text-[10px] xl:text-xs 2xl:text-sm text-[#424242] leading-relaxed font-sans">
               At MangJoe, we bring authentic Filipino flavors to New Zealand,
-              celebrating the Philippines' rich culinary heritage
+              celebrating the Philippines&apos; rich culinary heritage
             </p>
           </motion.div>
 

@@ -16,7 +16,18 @@ export default function ImageCarousel({ images, altTexts = [] }: ImageCarouselPr
   const dragX = useMotionValue(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  // Safety check
+  // Auto-play carousel (pauses on hover/interaction)
+  // Must be called before any early returns to follow React Hooks rules
+  useEffect(() => {
+    if (!images || images.length === 0 || isDragging) return;
+    const interval = setInterval(() => {
+      setDirection(1);
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(interval);
+  }, [currentIndex, images, images.length, isDragging]);
+
+  // Safety check - must be after hooks
   if (!images || images.length === 0) {
     return (
       <div className="relative w-full h-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center bg-[#F5F0E8] rounded-lg">
@@ -24,16 +35,6 @@ export default function ImageCarousel({ images, altTexts = [] }: ImageCarouselPr
       </div>
     );
   }
-
-  // Auto-play carousel (pauses on hover/interaction)
-  useEffect(() => {
-    if (isDragging) return;
-    const interval = setInterval(() => {
-      setDirection(1);
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
-    return () => clearInterval(interval);
-  }, [currentIndex, images.length, isDragging]);
 
   const handleNext = () => {
     setDirection(1);
