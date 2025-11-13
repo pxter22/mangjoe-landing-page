@@ -22,6 +22,7 @@ export default function Header() {
     { name: "Menu", href: "#menu" },
     { name: "Hours", href: "#hours" },
     { name: "About Us", href: "#about" },
+    { name: "FAQ", href: "#faq" },
   ];
 
   const scrollToSection = (href: string) => {

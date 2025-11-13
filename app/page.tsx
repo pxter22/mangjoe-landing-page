@@ -4,6 +4,7 @@ import Menu from "@/components/Menu";
 import Testimonial from "@/components/Testimonial";
 import About from "@/components/About";
 import Hours from "@/components/Hours";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Testimonial />
       <About />
       <Hours />
+      <FAQ />
       <Footer />
     </main>
   );
