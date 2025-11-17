@@ -28,7 +28,7 @@ const faqData: FAQItem[] = [
   {
     question: "Are there any allergens in your food?",
     answer:
-      "Yes. If you are allergic to peanuts, please avoid consuming our food, as some items may contain them.",
+      "Yes. Food prepared at Mang Joe's contains sesame, fish, mollusc, and peanuts. Please avoid consuming our food if you are allergic to any of these ingredients. Additionally, please note that our food is not halal.",
     category: "general",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@ const faqData: FAQItem[] = [
   {
     question: "Can I pre-order?",
     answer:
-      "Yes, you can! Please give us a call to place your order in advance.",
+      "Due to food court rules, we're unable to accept pre-orders.",
     category: "food-court",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +84,7 @@ const faqData: FAQItem[] = [
   {
     question: "Do you offer vegetarian or vegan options?",
     answer:
-      "Yes! We have vegetarian options, and vegan options may vary by event—please ask at the truck.",
+      "Our specials sometimes include Chop Suey, a delicious stir-fried vegetable dish. Availability varies depending on the day.",
     category: "general",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,7 +95,7 @@ const faqData: FAQItem[] = [
   {
     question: "Do you offer catering services?",
     answer:
-      "Yes! We cater for small and large events. Contact us for details and pricing.",
+      "Currently, we do not offer catering services.",
     category: "food-court",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,7 +117,7 @@ const faqData: FAQItem[] = [
   {
     question: "Do you have gluten-free options?",
     answer:
-      "Some dishes are gluten-free. Please ask our staff at the truck to confirm options.",
+      "No, sorry we do not have gluten-free options.",
     category: "general",
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -285,17 +285,6 @@ export default function FAQ() {
                                     className="text-bbq-orange-rich hover:text-bbq-orange-fire underline font-semibold transition-colors"
                                   >
                                     {contactInfo.phone}
-                                  </a>
-                                </span>
-                              )}
-                              {globalIndex === 7 && (
-                                <span>
-                                  {" "}
-                                  <a
-                                    href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
-                                    className="text-bbq-orange-rich hover:text-bbq-orange-fire underline font-semibold transition-colors"
-                                  >
-                                    Contact us
                                   </a>
                                 </span>
                               )}
