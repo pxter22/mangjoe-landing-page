@@ -277,17 +277,6 @@ export default function FAQ() {
                                   </a>
                                 </span>
                               )}
-                              {globalIndex === 4 && (
-                                <span>
-                                  {" "}
-                                  <a
-                                    href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
-                                    className="text-bbq-orange-rich hover:text-bbq-orange-fire underline font-semibold transition-colors"
-                                  >
-                                    {contactInfo.phone}
-                                  </a>
-                                </span>
-                              )}
                             </p>
                           </div>
                         </motion.div>

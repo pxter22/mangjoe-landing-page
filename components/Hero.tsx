@@ -208,7 +208,7 @@ export default function Hero() {
       {/* Scroll Down Arrow - Animated */}
       <a
         href="#menu"
-        className="absolute bottom-12 sm:bottom-14 md:bottom-16 lg:bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 group cursor-pointer"
+        className="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-4 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 group cursor-pointer"
       >
         <span className="text-xs sm:text-sm text-[#424242] font-sans uppercase tracking-wider opacity-70 group-hover:opacity-100 transition-opacity">
           Menu

@@ -9,28 +9,28 @@ const carouselSlides = [
   {
     id: 1,
     subtitle: "Our Story",
-    title: "HOW IT ALL BEGAN",
+    title: "FROM A TRICYCLE GRILL TO A DREAM",
     paragraph:
-      "Mang Joe's Chicken Inasal brings authentic Filipino BBQ flavors to your neighborhood. What started as a family passion for traditional Filipino grilling has become a beloved local spot where friends and families gather to enjoy the warm, smoky, and vibrant tastes of the Philippines.",
-    image: "/menu/combo.jpg",
+      "Hello! I am Mang Joe. I was born and raised in Bacolod – The Chicken Inasal Capital of the Philippines. Mang Joe's story began on the streets of Bacoor Cavite in 2006 with nothing more than a small tricycle fitted with a charcoal grill. I cooked chicken inasal for anyone who passed by. I didn't have much—but I had a passion for food and a dream in my heart. Every piece of chicken I grilled carried the flavour of my hometown, the laughter of neighbours, and the hope that one day more people would taste what I grew up loving.",
+    image: "/1.png",
     imageAlt: "Combo Meal - Grilled chicken and pork with rice",
   },
   {
     id: 2,
-    subtitle: "Our Secret",
-    title: "THE FAMILY RECIPE",
+    subtitle: "Our Journey",
+    title: "A NEW LAND, A NEW FIRE",
     paragraph:
-      "Our secret marinade, passed down through generations, gives our chicken its signature tangy and garlicky flavor. Each dish is grilled fresh to order, ensuring that perfect char and juiciness that makes Filipino BBQ so special.",
-    image: "/menu/inasal.jpg",
+      "When my family and I migrated to New Zealand, I brought nothing with me except determination and the memory of that smoky, savoury inasal. We started small—grilling in our backyard with a charcoal drum, then later moving into a food truck. No business experience, no guidebook, just courage and the belief that if we didn't try, we would never know. Sale by sale, week by week, we grew. We joined markets and events, setting up tents in the rain and learning the hard way that success isn’t always sunshine. We fell, we stood back up, and slowly people started coming—not just for the food, but for the story behind it. After two years, we expanded to a second setup, allowing us to attend two events in a weekend—one full truck, one compact system.",
+    image: "/foodtruck.jpg",
     imageAlt: "Chicken Inasal - Traditional Filipino grilled chicken",
   },
   {
     id: 3,
-    subtitle: "Our Mission",
-    title: "BRINGING PEOPLE TOGETHER",
+    subtitle: "Our Milestone",
+    title: "GROWING FLAMES, GROWING FAMILY",
     paragraph:
-      "At Mang Joe's, we believe food brings people together. Every meal is made with love, honoring the recipes and techniques that have been cherished in Filipino homes for generations.",
-    image: "/menu/liempo.jpg",
+      "Then in September 2025, a milestone we once only dreamed of became real: Mang Joe opened its first physical shop in the Ponsonby International Food Court. From a tricycle in Bacoor Cavite to a kitchen in the heart of Auckland, this journey has always been about more than chicken—it has been about family, courage, and bringing the flavours of home to a new land. To everyone who has supported us, shared our food, and believed in the journey—Maraming Salamat. You are now part of our story.",
+    image: "/shop.jpg",
     imageAlt: "Pork Liempo - Grilled pork belly",
   },
 ];
@@ -127,7 +127,9 @@ export default function About() {
 
                   {/* Content */}
                   <div className="text-[#424242] leading-relaxed text-sm sm:text-base md:text-lg font-sans">
-                    <p>{carouselSlides[currentIndex].paragraph}</p>
+                    <p className="whitespace-pre-line">
+                      {carouselSlides[currentIndex].paragraph}
+                    </p>
                   </div>
                 </motion.div>
               </AnimatePresence>
