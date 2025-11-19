@@ -21,7 +21,7 @@ const carouselSlides = [
     title: "A NEW LAND, A NEW FIRE",
     paragraph:
       "When my family and I migrated to New Zealand, I brought nothing with me except determination and the memory of that smoky, savoury inasal. We started small—grilling in our backyard with a charcoal drum, then later moving into a food truck. No business experience, no guidebook, just courage and the belief that if we didn't try, we would never know. Sale by sale, week by week, we grew. We joined markets and events, setting up tents in the rain and learning the hard way that success isn’t always sunshine. We fell, we stood back up, and slowly people started coming—not just for the food, but for the story behind it. After two years, we expanded to a second setup, allowing us to attend two events in a weekend—one full truck, one compact system.",
-    image: "/foodtruck.jpg",
+    image: "/foodtruck.JPG",
     imageAlt: "Chicken Inasal - Traditional Filipino grilled chicken",
   },
   {
@@ -30,7 +30,7 @@ const carouselSlides = [
     title: "GROWING FLAMES, GROWING FAMILY",
     paragraph:
       "Then in September 2025, a milestone we once only dreamed of became real: Mang Joe opened its first physical shop in the Ponsonby International Food Court. From a tricycle in Bacoor Cavite to a kitchen in the heart of Auckland, this journey has always been about more than chicken—it has been about family, courage, and bringing the flavours of home to a new land. To everyone who has supported us, shared our food, and believed in the journey—Maraming Salamat. You are now part of our story.",
-    image: "/shop.jpg",
+    image: "/shop.JPG",
     imageAlt: "Pork Liempo - Grilled pork belly",
   },
 ];
