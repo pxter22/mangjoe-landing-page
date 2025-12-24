@@ -46,6 +46,11 @@ export default function Home() {
           name="twitter:image"
           content="https://www.mangjoes.co.nz/og-image.jpg"
         />
+
+        <meta
+          name="google-site-verification"
+          content="KCZAZeRKtHeuK40Q60CrIkN5Vhl7mZAmKdPUJoXsx30"
+        />
       </Head>
       <main>
         <main className="min-h-screen">
