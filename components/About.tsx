@@ -1,8 +1,18 @@
 "use client";
 
+import { ReactNode } from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+
+type CarouselSlide = {
+  id: number;
+  subtitle: string;
+  title: string;
+  paragraph: ReactNode;
+  image: string;
+  imageAlt: string;
+};
 
 // Carousel slides data
 const carouselSlides = [
@@ -10,8 +20,23 @@ const carouselSlides = [
     id: 1,
     subtitle: "Our Story",
     title: "FROM A TRICYCLE GRILL TO A DREAM",
-    paragraph:
-      "Hello! I am Mang Joe. I was born and raised in Bacolod – The Chicken Inasal Capital of the Philippines. Mang Joe's story began on the streets of Bacoor Cavite in 2006 with nothing more than a small tricycle fitted with a charcoal grill. I cooked chicken inasal for anyone who passed by. I didn't have much—but I had a passion for food and a dream in my heart. Every piece of chicken I grilled carried the flavour of my hometown, the laughter of neighbours, and the hope that one day more people would taste what I grew up loving.",
+    paragraph: (
+      <>
+        Hello! I am Mang Joe. I was born and raised in Bacolod – The Chicken
+        Inasal Capital of the Philippines. Mang Joe&apos;s story began on the
+        streets of Bacoor Cavite in 2006 with nothing more than a small tricycle
+        fitted with a charcoal grill. I cooked chicken inasal for anyone who
+        passed by. I didn&apos;t have much—but I had a passion for food and a
+        dream in my heart. Every piece of chicken I grilled carried the flavour
+        of my hometown, the laughter of neighbours, and the hope that one day
+        more people would taste what I grew up loving.
+        <span className="block mt-4 text-xs text-[#666] italic">
+          (This image was generated using AI (DALL·E 3). The original reference
+          image was sourced from the owner’s personal Facebook account
+          approximately 10 years ago.)
+        </span>
+      </>
+    ),
     image: "/1.png",
     imageAlt: "Combo Meal - Grilled chicken and pork with rice",
   },
@@ -38,6 +63,17 @@ const carouselSlides = [
 export default function About() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Auto-play carousel - 15 seconds
   useEffect(() => {
@@ -136,7 +172,7 @@ export default function About() {
             </div>
 
             {/* Image - Right Side */}
-            <div className="order-1 md:order-2 relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px]">
+            <div className="order-1 md:order-2 relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] overflow-hidden md:overflow-visible">
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
                   key={`image-${currentIndex}`}
@@ -155,6 +191,16 @@ export default function About() {
                         (currentIndex - offset + carouselSlides.length) %
                         carouselSlides.length;
                       const stackDepth = offset;
+                      // Use smaller offsets on mobile to prevent overflow
+                      const xOffset = isMobile
+                        ? stackDepth * -5
+                        : stackDepth * -15;
+                      const yOffset = isMobile
+                        ? stackDepth * -4
+                        : stackDepth * -12;
+                      const rotation = isMobile
+                        ? stackDepth * -1
+                        : stackDepth * -2;
                       return (
                         <motion.div
                           key={`stack-${stackIndex}-${currentIndex}`}
@@ -168,9 +214,9 @@ export default function About() {
                           animate={{
                             opacity: 0.9 - stackDepth * 0.1,
                             scale: 1 - stackDepth * 0.03,
-                            x: stackDepth * -15,
-                            y: stackDepth * -12,
-                            rotate: stackDepth * -2,
+                            x: xOffset,
+                            y: yOffset,
+                            rotate: rotation,
                           }}
                           transition={{ duration: 0.4, ease: "easeOut" }}
                           className="absolute inset-0"

@@ -184,7 +184,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className="container mx-auto px-4 sm:px-6 md:px-8 absolute bottom-4 sm:bottom-6 md:bottom-8 left-0 right-0 z-10"
+        className="hidden md:block container mx-auto px-4 sm:px-6 md:px-8 absolute bottom-8 lg:bottom-8 left-0 right-0 z-10"
       >
         <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-3">
           {/* Delivery Truck Icon */}

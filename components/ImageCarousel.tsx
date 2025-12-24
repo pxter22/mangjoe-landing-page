@@ -13,8 +13,19 @@ export default function ImageCarousel({ images, altTexts = [] }: ImageCarouselPr
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const dragX = useMotionValue(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Auto-play carousel (pauses on hover/interaction)
   // Must be called before any early returns to follow React Hooks rules
@@ -80,7 +91,7 @@ export default function ImageCarousel({ images, altTexts = [] }: ImageCarouselPr
     }),
   };
 
-  const stackVariants = {
+  const getStackVariants = () => ({
     hidden: { 
       opacity: 0.5, 
       scale: 0.9,
@@ -94,14 +105,13 @@ export default function ImageCarousel({ images, altTexts = [] }: ImageCarouselPr
       const scale = 1 - (index * 0.03); // Each card 3% smaller (minimal reduction)
       const opacity = 0.9 - (index * 0.1); // Very high opacity so cards are clearly visible
       
-      // Fan pattern offsets - cards offset to left and up
-      // First card behind: slight left and up
-      // Second card behind: more left and up
-      const xOffset = index * -15; // More visible offset
-      const yOffset = index * -12; // More visible offset
+      // Fan pattern offsets - responsive based on screen size
+      // Use smaller offsets on mobile to prevent overflow
+      const xOffset = isMobile ? index * -5 : index * -15; // Smaller on mobile
+      const yOffset = isMobile ? index * -4 : index * -12; // Smaller on mobile
       
-      // Slight rotation for fan effect
-      const rotation = index * -2; // Slight counter-clockwise rotation
+      // Slight rotation for fan effect - less on mobile
+      const rotation = isMobile ? index * -1 : index * -2;
       
       return {
         scale,
@@ -116,7 +126,7 @@ export default function ImageCarousel({ images, altTexts = [] }: ImageCarouselPr
         },
       };
     },
-  };
+  });
 
   // Calculate which images should be visible in the stack
   // Always show 2 cards behind the active one for depth effect
@@ -133,12 +143,12 @@ export default function ImageCarousel({ images, altTexts = [] }: ImageCarouselPr
   return (
     <div 
       ref={carouselRef}
-      className="group relative w-full h-[400px] md:h-[500px] lg:h-[600px]"
+      className="group relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden"
       onMouseEnter={() => setIsDragging(true)}
       onMouseLeave={() => setIsDragging(false)}
     >
       {/* Stacked Images Container */}
-      <div className="relative w-full h-full overflow-visible">
+      <div className="relative w-full h-full overflow-visible md:overflow-visible">
         {/* Background stacked images - Always 2 cards */}
         {getStackedImages().map((item, stackIndex) => {
           // stackIndex 0 = furthest back (should be index 2), stackIndex 1 = closer (should be index 1)
@@ -149,7 +159,7 @@ export default function ImageCarousel({ images, altTexts = [] }: ImageCarouselPr
             custom={stackDepth}
             initial="hidden"
             animate="visible"
-            variants={stackVariants}
+            variants={getStackVariants()}
             className="absolute inset-0"
             style={{
               transformOrigin: "center center",
