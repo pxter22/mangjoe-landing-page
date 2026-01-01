@@ -48,7 +48,8 @@ export default function Menu() {
             <div className="h-px bg-gradient-to-l from-transparent via-[#ff6f00]/40 to-[#ff6f00]/40 w-16 sm:w-20"></div>
           </div>
           <p className="text-sm sm:text-base md:text-lg text-[#424242] leading-relaxed font-sans max-w-2xl mx-auto px-4">
-            Each dish is crafted with authentic Filipino flavors, grilled to perfection with our signature marinades and traditional techniques
+            Mangjoe Mangjoes menu features authentic Chicken Inasal, Inasal NZ, and Filipino food. 
+            Each dish is crafted with authentic Filipino flavors, grilled to perfection with our signature marinades and traditional techniques.
           </p>
         </motion.div>
 
