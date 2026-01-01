@@ -55,7 +55,7 @@ export default function Hero() {
           <p className="text-xs sm:text-sm text-[#424242] leading-relaxed font-sans">
             At Mangjoe (Mangjoes), we bring authentic Chicken Inasal and
             Filipino food to New Zealand. Experience the best Inasal NZ has to
-            offer - smoky, juicy Filipino grilled chicken you'll crave.
+            offer - smoky, juicy Filipino grilled chicken you&apos;ll crave.
           </p>
         </motion.div>
 
