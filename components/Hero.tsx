@@ -13,8 +13,7 @@ export default function Hero() {
       <div className="md:hidden container mx-auto px-4 sm:px-6 py-6 sm:py-8 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(100vh-5rem)] gap-4 sm:gap-6">
         {/* SEO H1 - Hidden visually but accessible */}
         <h1 className="sr-only">
-          Mangjoe Mangjoes - Authentic Chicken Inasal NZ | Filipino Food New
-          Zealand
+          Mang Joes Chicken Inasal NZ | Mang Joe | Chicken Inasal New Zealand | Filipino Food NZ
         </h1>
 
         {/* LOVE - Centered */}
@@ -53,9 +52,8 @@ export default function Hero() {
           className="mb-2 max-w-xs sm:max-w-sm text-center px-2"
         >
           <p className="text-xs sm:text-sm text-[#424242] leading-relaxed font-sans">
-            At Mangjoe (Mangjoes), we bring authentic Chicken Inasal and
-            Filipino food to New Zealand. Experience the best Inasal NZ has to
-            offer - smoky, juicy Filipino grilled chicken you&apos;ll crave.
+            Mang Joes (Mang Joe&apos;s) Chicken Inasal - Authentic Filipino grilled chicken in New Zealand. 
+            Best Chicken Inasal NZ. Visit Mang Joes for the most delicious Filipino food.
           </p>
         </motion.div>
 
@@ -75,8 +73,7 @@ export default function Hero() {
       <div className="hidden md:block lg:hidden container mx-auto px-6 relative w-full h-full min-h-[calc(100vh-6rem)] flex items-center justify-center">
         {/* SEO H1 - Hidden visually but accessible */}
         <h1 className="sr-only">
-          Mangjoe Mangjoes - Authentic Chicken Inasal NZ | Filipino Food New
-          Zealand
+          Mang Joes Chicken Inasal NZ | Mang Joe | Chicken Inasal New Zealand | Filipino Food NZ
         </h1>
 
         {/* LOVE - Left side */}
@@ -124,9 +121,8 @@ export default function Hero() {
             className="max-w-[240px] text-right"
           >
             <p className="text-xs text-[#424242] leading-relaxed font-sans">
-              Mangjoe (Mangjoes) - Authentic Chicken Inasal NZ. Best Filipino
-              food in New Zealand. Experience Inasal NZ with our smoky, juicy
-              Filipino grilled chicken.
+              Mang Joes (Mang Joe&apos;s) Chicken Inasal - Authentic Filipino grilled chicken in New Zealand. 
+              Best Chicken Inasal NZ. Visit Mang Joes for the most delicious Filipino food.
             </p>
           </motion.div>
 
@@ -144,8 +140,7 @@ export default function Hero() {
       <div className="hidden lg:block container mx-auto px-4 xl:px-8 2xl:px-12 relative w-full h-full min-h-[calc(100vh-7rem)] flex items-center justify-center">
         {/* SEO H1 - Hidden visually but accessible */}
         <h1 className="sr-only">
-          Mangjoe Mangjoes - Authentic Chicken Inasal NZ | Filipino Food New
-          Zealand
+          Mang Joes Chicken Inasal NZ | Mang Joe | Chicken Inasal New Zealand | Filipino Food NZ
         </h1>
 
         {/* LOVE - Left side */}
@@ -193,9 +188,8 @@ export default function Hero() {
             className="max-w-[200px] xl:max-w-[240px] 2xl:max-w-[280px] text-right"
           >
             <p className="text-[10px] xl:text-xs 2xl:text-sm text-[#424242] leading-relaxed font-sans">
-              Mangjoe (Mangjoes) - Authentic Chicken Inasal NZ. Best Filipino
-              food in New Zealand. Experience Inasal NZ with our smoky, juicy
-              Filipino grilled chicken.
+              Mang Joes (Mang Joe&apos;s) Chicken Inasal - Authentic Filipino grilled chicken in New Zealand. 
+              Best Chicken Inasal NZ. Visit Mang Joes for the most delicious Filipino food.
             </p>
           </motion.div>
 

@@ -2,18 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mangjoe | Mangjoes | Authentic Chicken Inasal NZ | Filipino Food NZ",
+  title:
+    "Mang Joes Chicken Inasal NZ | Mang Joe | Chicken Inasal New Zealand | mangjoes",
   description:
-    "Authentic Bacolod Chicken Inasal in New Zealand. Mangjoe delivers smoky, juicy Filipino grilled chicken you'll crave. Best Filipino food NZ - Chicken Inasal, Inasal NZ.",
+    "Mang Joes (Mang Joe's) serves authentic Chicken Inasal in New Zealand. Best Filipino food NZ - smoky, juicy grilled chicken inasal. Visit Mang Joes for authentic Filipino cuisine.",
   keywords: [
-    "Mangjoe",
-    "Mangjoes",
+    "Mang Joes",
     "Mang Joe",
     "Mang Joe's",
+    "Mangjoe",
+    "Mangjoes",
     "Chicken Inasal",
+    "Chicken Inasal NZ",
+    "Chicken Inasal New Zealand",
     "Inasal",
     "Inasal NZ",
-    "Chicken Inasal NZ",
     "Filipino food NZ",
     "Filipino food New Zealand",
     "Filipino restaurant NZ",
@@ -24,9 +27,10 @@ export const metadata: Metadata = {
     "Filipino cuisine New Zealand",
   ],
   openGraph: {
-    title: "Mangjoe | Chicken Inasal NZ",
+    title:
+      "Mang Joes Chicken Inasal NZ | Mang Joe | Chicken Inasal New Zealand",
     description:
-      "Authentic Bacolod Chicken Inasal in New Zealand. Mangjoe delivers smoky, juicy Filipino grilled chicken you'll crave.",
+      "Mang Joes (Mang Joe's) serves authentic Chicken Inasal in New Zealand. Best Filipino food NZ - smoky, juicy grilled chicken inasal. Visit Mang Joes for authentic Filipino cuisine.",
     type: "website",
     url: "https://www.mangjoes.co.nz",
     siteName: "Mang Joes Chicken Inasal NZ",
@@ -38,6 +42,17 @@ export const metadata: Metadata = {
         alt: "Mangjoe Mangjoes Chicken Inasal Food Truck - Authentic Filipino food NZ",
       },
     ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   other: {
     "article:publisher":
@@ -55,9 +70,15 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Restaurant",
     name: "Mang Joe's Chicken Inasal",
-    alternateName: ["Mangjoe", "Mangjoes", "Mang Joe", "Mang Joe's"],
+    alternateName: [
+      "Mang Joes",
+      "Mang Joe",
+      "Mang Joe's",
+      "Mangjoe",
+      "Mangjoes",
+    ],
     description:
-      "Authentic Bacolod Chicken Inasal in New Zealand. Mangjoe delivers smoky, juicy Filipino grilled chicken you'll crave. Best Inasal NZ and Filipino food in New Zealand.",
+      "Mang Joes (Mang Joe's) serves authentic Chicken Inasal in New Zealand. Best Filipino food NZ - smoky, juicy grilled chicken inasal. Visit Mang Joes for authentic Filipino cuisine.",
     image: "https://www.mangjoes.co.nz/foodtruck.JPG",
     servesCuisine: "Filipino",
     address: {
@@ -69,7 +90,7 @@ export default function RootLayout({
       addressCountry: "NZ",
     },
     telephone: "+642108156604",
-    email: "hello@mangjoes.com",
+    email: "marcuelofoodcorp.mjci@gmail.com",
     url: "https://www.mangjoes.co.nz",
     priceRange: "$$",
     aggregateRating: {

@@ -13,7 +13,7 @@ export const menuItems: MenuItem[] = [
     name: "Combo Meal",
     description:
       "A hearty combination of grilled chicken inasal and pork liempo served with rice and vegetables",
-    price: 28.80,
+    price: 28.8,
     image: "/menu/combo.jpg",
     category: "Main",
   },
@@ -22,38 +22,42 @@ export const menuItems: MenuItem[] = [
     name: "Chicken Inasal",
     description:
       "Grilled marinated chicken, tender and flavorful with tangy and garlicky notes",
-    price: 22.60,
+    price: 22.6,
     image: "/menu/inasal.jpg",
     category: "Main",
   },
   {
     id: "3",
     name: "Pork Liempo",
-    description: "Grilled pork belly with crispy skin, marinated in our special sauce",
-    price: 22.60,
+    description:
+      "Grilled pork belly , so tendy and juicy marinated in our special sauce.",
+    price: 22.6,
     image: "/menu/liempo.jpg",
     category: "Main",
   },
   {
     id: "4",
     name: "Chicken Sigsig Meal",
-    description: "Sizzling chicken sisig served with rice, perfectly seasoned and grilled",
-    price: 18.70,
+    description:
+      "Sizzling chicken sisig served with rice, perfectly seasoned and grilled",
+    price: 18.7,
     image: "/menu/chickensigsig.jpg",
     category: "Special",
   },
   {
     id: "5",
     name: "Pork Sigsig",
-    description: "Sizzling pork sisig with onions and chili, served on a hot plate",
-    price: 18.70,
+    description:
+      "Sizzling pork sisig with onions and chili, served on a hot plate",
+    price: 18.7,
     image: "/menu/porksigsig.jpg",
     category: "Special",
   },
   {
     id: "6",
     name: "Special",
-    description: "Our Special – A delicious surprise that changes daily! Be sure to check back for today's unique creation.",
+    description:
+      "Our Special – A delicious surprise that changes daily! Be sure to check back for today's unique creation.",
     price: 0,
     image: "/menu/specialmeal.png",
     category: "Special",
@@ -61,8 +65,9 @@ export const menuItems: MenuItem[] = [
   {
     id: "7",
     name: "Filo Hot Dog",
-    description: "Filipino-style hot dog on a stick, grilled to perfection with our signature marinade",
-    price: 12.00,
+    description:
+      "Filipino-style hot dog on a stick, grilled to perfection with our signature marinade",
+    price: 12.0,
     image: "/menu/hotdog.jpg",
     category: "Side",
   },
@@ -70,7 +75,7 @@ export const menuItems: MenuItem[] = [
     id: "8",
     name: "Pork Skewers",
     description: "Sweet and savory pork skewers grilled to perfection",
-    price: 16.70,
+    price: 16.7,
     image: "/menu/porkskewers.jpg",
     category: "Side",
   },
@@ -88,12 +93,13 @@ export const openingHours = {
 
 export const contactInfo = {
   phone: "0210 815 6604",
-  email: "hello@mangjoes.com",
+  email: "marcuelofoodcorp.mjci@gmail.com",
   address: "106 Ponsonby Road, Ponsonby, Auckland 1011",
 };
 
 export const socialLinks = {
-  facebook: "https://www.facebook.com/p/Mang-Joes-Chicken-Inasal-NZ-100063472661717/",
+  facebook:
+    "https://www.facebook.com/p/Mang-Joes-Chicken-Inasal-NZ-100063472661717/",
   instagram: "https://instagram.com/mangjoes",
   twitter: "https://twitter.com/mangjoes",
 };
