@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     "Mang Joes Chicken Inasal NZ | Mang Joe | Chicken Inasal New Zealand | mangjoes",
   description:
     "Mang Joes (Mang Joe's) serves authentic Chicken Inasal in New Zealand. Best Filipino food NZ - smoky, juicy grilled chicken inasal. Visit Mang Joes for authentic Filipino cuisine.",
+  icons: {
+    icon: "/Logo.png",
+  },
   keywords: [
     "Mang Joes",
     "Mang Joe",
